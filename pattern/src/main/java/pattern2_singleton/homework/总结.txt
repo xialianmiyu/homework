@@ -1,0 +1,49 @@
+
+2、总结每种单例写法的优、缺点。
+饿汉式：
+    优点--线程安全
+    缺点--浪费内存空间
+
+懒汉式：
+    优点--延迟加载，节省内存
+    缺点--使用synchronized，导致性能下降
+
+懒汉式演化1--doubleCheck：
+    优点--延迟加载，节省内存
+    缺点--使用synchronized，导致性能下降，但是锁的代码少性能较上面的要好。
+
+懒汉式演化2--静态内部类：
+    优点--延迟加载，节省内存，没有使用synchronized，性能较好
+    缺点--代码变复杂，不容易看懂
+
+注册式单例--枚举式：
+    优点--线程安全
+    缺点--浪费内存空间，本质也是在类加载的时候初始化
+
+3、思考破坏单例模式的方式有哪些？并且归纳总结。
+破坏单例方式：反射、反序列
+
+    防反射：在私有的构造器里增加判断，如果单例已被实例化过，则抛出错误。
+
+    防反序列化：序列化的时候在ObjectInputStream方法中调用了readObject0()。
+    通过重写该方法防止序列化破坏单例。
+    private Object readResolve() {
+            return getInstance();
+    }
+
+4、梳理内部类的执行逻辑，并画出时序图。
+
+    1）在调用StaticInnClass.getInstance();执行的时候，先加载StaticInnClass类；
+    2）innerClass.instance;方法使用了内部类innerClass，此时加载内部类innerClass，
+    并初始化类属性StaticInnClass；
+
+
+    public class StaticInnClass {
+        private static class innerClass {
+            private static final StaticInnClass instance = new StaticInnClass();
+        }
+        public static StaticInnClass getInstance() {
+            return innerClass.instance;
+        }
+        private StaticInnClass() {}
+    }

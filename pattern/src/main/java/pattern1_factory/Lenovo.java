@@ -1,4 +1,4 @@
-package simple;
+package pattern1_factory;
 
 public class Lenovo extends Computer {
 
