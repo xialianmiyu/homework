@@ -1,0 +1,15 @@
+
+
+1、按照代码临摹了一份MyProxy
+
+2、思考：为什么JDK动态代理中要求目标类实现的接口数量不能超过65535个？
+    虚拟机对接口数限制
+ * <li>The resulting proxy class must not exceed any limits imposed
+     * on classes by the virtual machine.  For example, the VM may limit
+     * the number of interfaces that a class may implement to 65535; in
+     * that case, the size of the {@code interfaces} array must not
+     * exceed 65535.
+     * </ul>
+
+3、结合自身的业务场景用代理模式进行重构。
+    使用代理，在加密操作前对数据进行处理  ---encrypt

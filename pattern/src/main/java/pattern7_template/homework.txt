@@ -1,0 +1,17 @@
+1、思考：模板模式除了继承以外，还有哪些实现方式？
+    不用继承，难道用组合？
+    用组合把每步骤组合起来，但实现起来感觉有点像策略模式
+
+public class Process {
+    private StepFirst first;
+    private StepSecond second;
+    private StepThird third;
+
+    public void doSomething(){
+        before();
+        first.first();
+        second.second();
+        third.third();
+        otherSetp();
+    }
+}
