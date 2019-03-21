@@ -1,0 +1,39 @@
+
+1、用一句自己的话总结学过的设计模式（要精准）。
+
+    工厂模式--告诉我你需要啥
+    单例模式--世界只有一个我
+    原型模式--倒模
+    代理模式--麻烦事交给别人
+    委派模式--自己做不了，让别人替你做
+    策略模式--ABCD单选题
+    模版模式--流程标准化，自己实现定制
+    适配器模式--演出女生不够，来个男办女装
+    装饰器模式--化妆
+    观察者模式--任务完成时通知
+
+
+2、列举SpringAOP、IOC、DI应用的代码片段。
+
+    SpringAOP
+        @Pointcut("execution(* com.aijava.springcode.service..*.*(..))")
+        @Before("pointCut()")
+        @After("pointCut()")
+        @AfterReturning(pointcut="pointCut()",returning="returnVal")
+        @AfterThrowing(pointcut="pointCut()",throwing="error")
+        @Around("pointCut()")
+
+    IOC
+        SpringApplication application = new SpringApplication(ApplicationServer.class);
+        ConfigurableApplicationContext context = application.run(args);
+        UserPoJpaRepository userPoJpaRepository = context.getBean(UserPoJpaRepository.class);
+
+    DI
+        @Autowired
+        <bean id="hello" class="com.maven.Hello"><constructor-arg value="hello" /></bean>这是使用构造器注入来装配bean。
+        <bean id="hello" class="com.maven.Hello" p:hello="hello" />这是使用setter注入
+
+
+
+
+
