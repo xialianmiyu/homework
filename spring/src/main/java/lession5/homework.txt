@@ -1,0 +1,13 @@
+
+1、使用ProcessOn绘制Spring AOP容器初始化过程的时序图。
+    aop.jpg
+
+2、整理笔记，完全理解Spring AOP容器的核心原理和设计模式的应用背景。
+    核心原理：使用代理实现aop
+    initializeBean方法里使用了模版方法
+    createAopProxy方法使用策略模式，获取代理对象
+    调用的时候，使用了委派
+
+
+3、加强理解练习，掌握看源码的要领；看源码从此不晕车。
+

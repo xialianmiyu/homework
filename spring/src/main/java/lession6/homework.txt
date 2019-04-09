@@ -1,0 +1,11 @@
+
+1、使用ProcessOn绘制Spring MVC容器初始化过程的时序图。
+    mvc.jpg
+
+2、整理笔记，完全理解Spring MVC容器的核心原理和设计模式的应用背景。
+    初始化的时候，initStrategies使用了模版模式
+    处理请求的时候使用委派，由DispatcherServlet#doDispatch方法进行处理
+    doDispatch方法里使用模版方法，一步一步处理请求
+
+
+3、加强理解练习，掌握看源码的要领；看源码从此不晕车。
