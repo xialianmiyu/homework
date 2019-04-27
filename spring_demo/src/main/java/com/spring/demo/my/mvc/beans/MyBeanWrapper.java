@@ -5,11 +5,7 @@ public class MyBeanWrapper {
     private Object wrapperInstance;
     private Class<?> wrappedClss;
 
-    public Object getWrapperInstance() {
-        return wrapperInstance;
-    }
-
-    public void setWrapperInstance(Object wrapperInstance) {
+    public MyBeanWrapper(Object wrapperInstance) {
         this.wrapperInstance = wrapperInstance;
     }
 
@@ -17,7 +13,8 @@ public class MyBeanWrapper {
         return wrappedClss;
     }
 
-    public void setWrappedClss(Class<?> wrappedClss) {
-        this.wrappedClss = wrappedClss;
+
+    public Object getWrapperInstance() {
+        return wrapperInstance;
     }
 }
