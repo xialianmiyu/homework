@@ -11,3 +11,4 @@ public class MyAopConfig {
     private String aspectAfterThrow;
     private String aspectAfterThrowingName;
 }
+
