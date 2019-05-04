@@ -9,12 +9,19 @@
         <module name="pattern" />
         <module name="spring" />
         <module name="spring_demo" />
+        <module name="spring_orm" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="8">
-      <module name="pattern" target="6" />
-      <module name="spring" target="6" />
-      <module name="spring_demo" target="7" />
+      <module name="pattern" target="8" />
+      <module name="spring" target="8" />
+      <module name="spring_demo" target="8" />
+      <module name="spring_orm" target="8" />
     </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="spring_orm" options="-verbose -bootclasspath &quot;G:/Program Files/Java/jdk1.8.0_151/jre/lib/rt.jar&quot;" />
+    </option>
   </component>
 </project>
