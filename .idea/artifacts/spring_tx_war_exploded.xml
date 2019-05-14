@@ -43,7 +43,7 @@
         </element>
       </element>
       <element id="directory" name="META-INF">
-        <element id="file-copy" path="$PROJECT_DIR$/../javacode/spring_tx/target/spring_tx/META-INF/MANIFEST.MF" />
+        <element id="file-copy" path="$PROJECT_DIR$/../javacode/spring_tx_gupao3_lession10/target/spring_tx/META-INF/MANIFEST.MF" />
       </element>
       <element id="javaee-facet-resources" facet="spring_tx/web/Web" />
     </root>

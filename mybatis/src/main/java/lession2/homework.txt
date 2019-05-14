@@ -1,0 +1,12 @@
+
+2、总结：MyBatis里面用到了哪些设计模式？
+
+工厂--sqlsessionfactory
+单例--sqlsessionfactory configuration
+建造者--sqlsessionfactoryBuilder
+装饰者--cachingexector  simple resue batch lurcache  fifocache prepecturlcache
+代理--spring继承mybatis sqlsessionInterceptor 插件plugin log 延迟加载proxyfactory
+适配器--日志 sl4j
+Sl4j是门面模式，只有抽象接口。Jdk14、log4j是具体实现，如果在代码写死具体实现以后不好改，所以用sl4j。如果某些日志具体实现不支持sl4j，就用适配器将其实用sl4j。
+模板方法--executor baseExecutor simple reuse batch、
+责任链--interceptorchain
