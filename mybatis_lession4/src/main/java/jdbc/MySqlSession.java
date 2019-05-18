@@ -5,9 +5,9 @@ public class MySqlSession {
     private MyConfiguration configuration;
     private MyExecutor executor;
 
-    public MySqlSession(MyConfiguration configuration) {
+    public MySqlSession(MyConfiguration configuration, MyExecutor executor) {
         this.configuration = configuration;
-        this.executor = new MyExecutor(configuration);
+        this.executor =executor;
     }
 
     public <T> T selectOne(String statementId, Object paramater){

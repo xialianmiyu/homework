@@ -17,8 +17,8 @@
     </annotationProcessing>
     <bytecodeTargetLevel target="8">
       <module name="mybatis" target="1.5" />
-      <module name="mybatis_lession3" target="8" />
-      <module name="mybatis_lession4" target="8" />
+      <module name="mybatis_lession3" target="1.5" />
+      <module name="mybatis_lession4" target="1.5" />
       <module name="pattern" target="6" />
       <module name="spring" target="6" />
       <module name="spring_demo" target="7" />
