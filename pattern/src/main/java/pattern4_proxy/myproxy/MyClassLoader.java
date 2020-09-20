@@ -28,10 +28,9 @@ public class MyClassLoader extends ClassLoader {
             return null;
         }
 
+
         try (FileInputStream in = new FileInputStream(classFile);
              ByteArrayOutputStream out = new ByteArrayOutputStream()) {
-
-
             byte[] buff = new byte[1024];
             int len;
             while ((len = in.read(buff)) != -1) {

@@ -2,7 +2,7 @@ package pattern1_factory.abstr;
 
 public class Ingredient {
     String name;
-    public Ingredient(){}
+
     public Ingredient(String name){
         this.name=name;
     }

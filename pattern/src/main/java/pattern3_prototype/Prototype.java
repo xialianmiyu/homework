@@ -14,6 +14,7 @@ public class Prototype {
         student=parseWithPrototype(url);
         System.out.println(student.toString());
     }
+
     private static Student parseWithPrototype(String paramurl){
         Student student=new Student();
         /*Class clazz=pattern3_prototype.Student.class;

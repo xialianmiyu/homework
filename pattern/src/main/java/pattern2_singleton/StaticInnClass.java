@@ -1,11 +1,11 @@
 package pattern2_singleton;
 
 public class StaticInnClass {
-	private static class innerClass {
+	private static class IinnerClass {
 		private static final StaticInnClass instance = new StaticInnClass();
 	}
 	public static StaticInnClass getInstance() {
-		return innerClass.instance;
+		return IinnerClass.instance;
 	}
 	private StaticInnClass() {}
 }

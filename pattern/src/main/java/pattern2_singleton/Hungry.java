@@ -6,6 +6,4 @@ public class Hungry {
 	public static Hungry getInstance() {
 		return hungry;
 	}
-
-
 }

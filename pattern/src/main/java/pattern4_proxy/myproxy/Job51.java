@@ -7,6 +7,7 @@ import java.lang.reflect.Method;
 
 
 public class Job51 implements MyInvocationHandler , Serializable {
+
     private Object target;
     public Object getInstance(Object target) throws Exception{
         this.target = target;
@@ -21,6 +22,4 @@ public class Job51 implements MyInvocationHandler , Serializable {
         System.out.println("上班");
         return obj;
     }
-
-
 }

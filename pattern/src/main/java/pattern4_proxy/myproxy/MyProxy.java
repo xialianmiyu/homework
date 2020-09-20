@@ -13,6 +13,8 @@ import java.util.Map;
 
 public class MyProxy {
 
+
+
     public static final String ln = "\r\n";
 
     public static Object newProxyInstance(MyClassLoader classLoader, Class<?>[] interfaces, MyInvocationHandler h) {
